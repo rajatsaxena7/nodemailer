@@ -19,32 +19,33 @@ module.exports = async (req, res) => {
     },
   });
 
-  // Fetch the attachment from the URL
-  let attachment;
-  try {
-    const response = await axios.get(attachmentUrl, { responseType: 'arraybuffer' });
-    attachment = response.data;
-  } catch (error) {
-    return res.status(500).send(`Failed to fetch attachment: ${error.toString()}`);
-  }
-
   let mailOptions = {
     from: 'ashutosh@gully2global.com',
     to: to,
     subject: subject,
     text: text,
-    attachments: [
-      {
-        // Specify filename or it will be derived from the URL
-        filename: 'attachment.png', // Example filename, you might want to dynamically set this based on the URL or content type
-        content: attachment,
-      },
-    ],
+    // Initialize attachments as an empty array; it may be filled later
+    attachments: [],
   };
 
+  // Only attempt to add an attachment if an attachment URL is provided
+  if (attachmentUrl) {
+    try {
+      const response = await axios.get(attachmentUrl, { responseType: 'arraybuffer' });
+      // Add the attachment to the mail options
+      mailOptions.attachments.push({
+        filename: 'attachment.png', // Adjust filename as needed
+        content: response.data,
+      });
+    } catch (error) {
+      return res.status(500).send(`Failed to fetch attachment: ${error.toString()}`);
+    }
+  }
+
+  // Attempt to send the email (with or without the attachment)
   try {
     await transporter.sendMail(mailOptions);
-    res.status(200).send('Email sent with attachment');
+    res.status(200).send('Email sent' + (attachmentUrl ? ' with attachment' : ''));
   } catch (error) {
     res.status(500).send(error.toString());
   }
