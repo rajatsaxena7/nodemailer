@@ -6,11 +6,11 @@ const port = 3000;
 app.use(express.json());
 
 let transporter = nodemailer.createTransport({
-  host: 'smtp-relay.brevo.com', // Your email provider's SMTP host
+  host: 'smtp.hostinger.com', // Your email provider's SMTP host
   port: 465, // Typically 587 for secure SMTP
-  secure: false, // True for 465, false for other ports
+  secure: true, // True for 465, false for other ports
   auth: {
-    user: 'dannyanime367@gmail.com', // Your email
+    user: 'ashutosh@gully2global.com', // Your email
     pass: 'Ashutosh@!23', // Your email password or app-specific password
   },
 });
