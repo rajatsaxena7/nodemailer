@@ -1,23 +1,23 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
-const app = express();
-const port = 3000;
 
-app.use(express.json());
+module.exports = async (req, res) => {
+  if (req.method !== 'POST') {
+    return res.status(405).send({ message: 'Only POST requests allowed' });
+  }
 
-let transporter = nodemailer.createTransport({
-  host: 'smtp.hostinger.com', // Your email provider's SMTP host
-  port: 465, // Typically 587 for secure SMTP
-  secure: true, // True for 465, false for other ports
-  auth: {
-    user: 'ashutosh@gully2global.com', // Your email
-    pass: 'Ashutosh@!23', // Your email password or app-specific password
-  },
-});
-
-app.post('/send-email', (req, res) => {
   const { to, subject, text } = req.body;
-  
+
+  let transporter = nodemailer.createTransport({
+    host: 'smtp.hostinger.com',
+    port: 465,
+    secure: true,
+    auth: {
+      user: 'ashutosh@gully2global.com',
+      pass: 'Ashutosh@!23',
+    },
+  });
+
   let mailOptions = {
     from: 'ashutosh@gully2global.com',
     to: to,
@@ -25,14 +25,10 @@ app.post('/send-email', (req, res) => {
     text: text,
   };
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      return res.status(500).send(error.toString());
-    }
-    res.status(200).send('Email sent: ' + info.response);
-  });
-});
-
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}/`);
-});
+  try {
+    await transporter.sendMail(mailOptions);
+    res.status(200).send('Email sent');
+  } catch (error) {
+    res.status(500).send(error.toString());
+  }
+};
