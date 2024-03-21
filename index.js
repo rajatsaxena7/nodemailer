@@ -7,11 +7,11 @@ app.use(express.json());
 
 let transporter = nodemailer.createTransport({
   host: 'smtp-relay.brevo.com', // Your email provider's SMTP host
-  port: 587, // Typically 587 for secure SMTP
+  port: 465, // Typically 587 for secure SMTP
   secure: false, // True for 465, false for other ports
   auth: {
     user: 'dannyanime367@gmail.com', // Your email
-    pass: 'k7w2UOGILPJjv8Tg', // Your email password or app-specific password
+    pass: 'Ashutosh@!23', // Your email password or app-specific password
   },
 });
 
@@ -19,7 +19,7 @@ app.post('/send-email', (req, res) => {
   const { to, subject, text } = req.body;
   
   let mailOptions = {
-    from: 'dannyanime367@gmail.com',
+    from: 'ashutosh@gully2global.com',
     to: to,
     subject: subject,
     text: text,
