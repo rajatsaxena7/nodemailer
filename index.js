@@ -20,7 +20,7 @@ module.exports = async (req, res) => {
   });
 
   let mailOptions = {
-    from: 'rsmx141@gmail.com',
+    from: 'ashutosh@gully2global.com',
     to: to,
     subject: subject,
     text: text,
