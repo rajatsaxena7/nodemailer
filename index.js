@@ -1,12 +1,14 @@
 const nodemailer = require('nodemailer');
 const axios = require('axios');
+const cors = require('cors');
 
-module.exports = async (req, res) => {
-  // Allow requests from any origin
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+const corsOptions = {
+  origin: '*',
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept']
+};
 
+module.exports = cors(corsOptions)(async (req, res) => {
   if (req.method !== 'POST') {
     return res.status(405).send({ message: 'Only POST requests allowed' });
   }
@@ -53,4 +55,4 @@ module.exports = async (req, res) => {
   } catch (error) {
     res.status(500).send(error.toString());
   }
-};
+});
