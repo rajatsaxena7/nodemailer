@@ -43,10 +43,12 @@ module.exports = async (req, res) => {
   }
 
   // Attempt to send the email (with or without the attachment)
-  try {
+ try {
     await transporter.sendMail(mailOptions);
-    res.status(200).send('Email sent' + (attachmentUrl ? ' with attachment' : ''));
+    // Modify this line to send a JSON response
+    res.status(200).send({ message: 'Email sent' + (attachmentUrl ? ' with attachment' : '') });
   } catch (error) {
-    res.status(500).send(error.toString());
+    // Also, ensure error responses are in JSON
+    res.status(500).send({ error: error.toString() });
   }
 };
