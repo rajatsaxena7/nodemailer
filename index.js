@@ -1,14 +1,8 @@
+const express = require('express'); // Not used in Vercel serverless functions
 const nodemailer = require('nodemailer');
 const axios = require('axios');
-const cors = require('cors');
 
-const corsOptions = {
-  origin: '*',
-  methods: ['GET', 'POST', 'OPTIONS'],
-  allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept']
-};
-
-module.exports = cors(corsOptions)(async (req, res) => {
+module.exports = async (req, res) => {
   if (req.method !== 'POST') {
     return res.status(405).send({ message: 'Only POST requests allowed' });
   }
@@ -26,7 +20,7 @@ module.exports = cors(corsOptions)(async (req, res) => {
   });
 
   let mailOptions = {
-    from: 'ashutosh@gully2global.com',
+    from: 'rajatjiedm@gmail.com',
     to: to,
     subject: subject,
     text: text,
@@ -55,4 +49,4 @@ module.exports = cors(corsOptions)(async (req, res) => {
   } catch (error) {
     res.status(500).send(error.toString());
   }
-});
+};
