@@ -28,10 +28,10 @@ module.exports = async (req, res) => {
 We are reaching out to inform you of the following:
 
 ${text} 
-Please [desired action] by logging into the platform.
+Please take the necessary action by logging into the platform.
 
 Best regards,
-[Your Organization/Department Name]`,
+`,
     attachments: [],
   };
 
