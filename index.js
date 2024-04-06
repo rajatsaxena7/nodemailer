@@ -23,8 +23,15 @@ module.exports = async (req, res) => {
     from: 'ashutosh@gully2global.com',
     to: to,
     subject: subject,
-    text: text,
-    // Initialize attachments as an empty array; it may be filled later
+    text: `Attention Required,
+
+We are reaching out to inform you of the following:
+
+${text} 
+Please [desired action] by logging into the platform.
+
+Best regards,
+[Your Organization/Department Name]`,
     attachments: [],
   };
 
