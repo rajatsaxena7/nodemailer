@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
   const { to, subject, text, attachmentUrl } = req.body;
 
   let transporter = nodemailer.createTransport({
-    host: 'smtp-mail.hostinger.com',
+    host: 'smtp-mail.outlook.com',
     SMTPAuth : true,
     port: 587,
     SMTPSecure : 'tls',
