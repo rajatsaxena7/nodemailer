@@ -10,22 +10,20 @@ module.exports = async (req, res) => {
   const { to, subject, text, attachmentUrl } = req.body;
 
   let transporter = nodemailer.createTransport({
-    host: 'smtp-mail.hostinger.com',
-    secure : false,
-    port: 587,
-
-
+    host: 'smtp.hostinger.com',
+    port: 465,
+    secure: true,
     auth: {
       user: 'ashutosh@gully2global.com',
       pass: 'Ashutosh@!23',
-      
     },
   });
 
   let mailOptions = {
-    from: 'support@digi9.co.in',
+    from: 'ashutosh@gully2global.com',
     to: to,
     subject: subject,
+    text: text,
     text: `Attention Required,
 
 We are reaching out to inform you for the following:
