@@ -11,7 +11,7 @@ module.exports = async (req, res) => {
 
   let transporter = nodemailer.createTransport({
     host: 'smtp-mail.hostinger.com',
-    SMTP-Auth : true,
+    SMTPAuth : true,
     port: 587,
     SMTPSecure : 'tls',
 
