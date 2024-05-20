@@ -11,17 +11,15 @@ module.exports = async (req, res) => {
 
   let transporter = nodemailer.createTransport({
     host: 'smtp-mail.outlook.com',
+    SMTP-Auth : true;
     port: 587,
-    secure: false,
-     hostnamesecureConnection: false,
+    SMTPSecure : 'tls';
 
 
     auth: {
       user: 'support@digi9.co.in',
       pass: 'Shasudigi@21',
-      tls: {
-        ciphers:'SSLv3'
-    }
+      
     },
   });
 
