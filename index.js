@@ -13,11 +13,15 @@ module.exports = async (req, res) => {
     host: 'smtp-mail.outlook.com',
     port: 587,
     secure: false,
+     hostnamesecureConnection: false,
 
 
     auth: {
       user: 'support@digi9.co.in',
       pass: 'Shasudigi@21',
+      tls: {
+        ciphers:'SSLv3'
+    }
     },
   });
 
