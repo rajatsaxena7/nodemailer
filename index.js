@@ -13,7 +13,7 @@ module.exports = async (req, res) => {
     host: 'smtp-mail.outlook.com',
     port: 587,
     secure: false,
-   requireTLS: true
+   requireTLS: true,
 
     auth: {
       user: 'support@digi9.co.in',
