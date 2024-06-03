@@ -6,10 +6,6 @@ const app = express();
 app.use(express.json());
 
 const sendEmail = async (req, res, template) => {
-  if (req.method !== 'POST') {
-    return res.status(405).send({ message: 'Only POST requests allowed' });
-  }
-
   const { to, roNumber, articleTitle, vendorName, vendorContact, attachmentUrl } = req.body;
 
   let transporter = nodemailer.createTransport({
@@ -95,7 +91,15 @@ ${vendorContact}`;
       break;
 
     default:
-      return res.status(400).send({ message: 'Invalid template' });
+      mailOptions.subject = req.body.subject;
+      mailOptions.text = `Attention Required,
+
+We are reaching out to inform you for the following:
+
+${req.body.text} 
+Please take the necessary action.
+
+Best regards,`;
   }
 
   // Only attempt to add an attachment if an attachment URL is provided
@@ -121,9 +125,18 @@ ${vendorContact}`;
   }
 };
 
+// Original send-email endpoint
+app.post('/send-email', (req, res) => sendEmail(req, res, 'default'));
+
+// New endpoints
 app.post('/email/release-order', (req, res) => sendEmail(req, res, 'release-order'));
 app.post('/email/approval-request', (req, res) => sendEmail(req, res, 'approval-request'));
 app.post('/email/ro-status', (req, res) => sendEmail(req, res, 'ro-status'));
 app.post('/email/bill-raised', (req, res) => sendEmail(req, res, 'bill-raised'));
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
 
 module.exports = app;
