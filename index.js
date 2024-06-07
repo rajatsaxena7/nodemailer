@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 const sendEmail = async (req, res, template) => {
-  const { to, roNumber, articleTitle, vendorName, vendorContact, attachmentUrl } = req.body;
+  const { to, roNumber, articleTitle, vendorName, vendorContact, attachmentUrl,notesheetNumber,amount} = req.body;
 
   let transporter = nodemailer.createTransport({
     host: 'smtp.hostinger.com',
@@ -80,7 +80,47 @@ Deputy Director
 Department of Information and Public Relations
 Government of Arunachal Pradesh`;
       break;
-  
+
+
+  case 'assistantBill':
+      mailOptions.subject = `Action Required: Review and Process Bill for RO Number ${roNumber}`;
+      mailOptions.text = `Dear Assistant,
+
+I hope this email finds you well.
+
+This is to inform you that a bill has been raised by ${vendorName} for the publication of the article bearing RO Number ${roNumber} and has been sent to you for processing.
+Please review the bill and process it accordingly. You can view the details and approve or reject the bill from your dashboard.
+
+Thank you for your prompt attention to this matter.
+
+Best regards,
+${vendorName}
+${vendorContact}
+Department of Information and Public Relations
+Government of Arunachal Pradesh`;
+      break;
+
+
+
+      
+ case 'notesheetcreate':
+      mailOptions.subject = ` Request for Review and Action: Notesheet ${notesheetNumber} for Release Order ${roNumber}`;
+      mailOptions.text = `Dear Deputy Director,
+
+I hope this email finds you well.
+
+This is to inform you that a notesheet has been created with Notesheet No. ${notesheetNumber} and an amount of ${amount} for the sent Release Order ${roNumber}.
+Please review the bill and process it accordingly. You can view the details and approve or reject the bill from your dashboard.
+
+Thank you for your prompt attention to this matter.
+
+Best regards,
+Assistant
+contact@gmail.com
+Department of Information and Public Relations
+Government of Arunachal Pradesh`;
+      break;
+
       
       case 'vendorreply':
       mailOptions.subject = `  Acceptance of Release Order ${roNumber} by ${vendorName}`;
@@ -188,6 +228,8 @@ app.post('/send-email', (req, res) => sendEmail(req, res, 'default'));
 app.post('/email/release-order', (req, res) => sendEmail(req, res, 'release-order'));
 app.post('/email/billRaisedDeputy', (req, res) => sendEmail(req, res, 'billRaisedDeputy'));
 app.post('/email/billRaisedCtd', (req, res) => sendEmail(req, res, 'billRaisedCtd'));
+app.post('/email/notesheetcreate', (req, res) => sendEmail(req, res, 'notesheetcreate'));
+app.post('/email/assistantBill', (req, res) => sendEmail(req, res, 'assistantBill'));
 app.post('/email/vendorreply', (req, res) => sendEmail(req, res, 'vendorreply'));
 app.post('/email/accepting', (req, res) => sendEmail(req, res, 'accepting'));
 app.post('/email/approval-request', (req, res) => sendEmail(req, res, 'approval-request'));
