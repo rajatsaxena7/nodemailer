@@ -50,7 +50,7 @@ Government of Arunachal Pradesh`;
       mailOptions.text = `Dear ADVT-Cell,
 
 We are pleased to inform you that the Release Order ${roNumber} for the article has been approved by the Deputy Director and sent for approval to the vendor.
-Thank you for your attention to this matter.
+
 
 
 Thank you for your attention to this matter.
