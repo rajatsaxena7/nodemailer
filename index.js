@@ -42,6 +42,32 @@ Department of Information and Public Relations
 Government of Arunachal Pradesh`;
       break;
 
+
+
+      
+      case 'accepting':
+      mailOptions.subject = `  Approval Notification for Release Order ${roNumber}.`;
+      mailOptions.text = `Dear ADVT-Cell,
+
+We are pleased to inform you that the Release Order ${roNumber} for the article has been approved by the Deputy Director and sent for approval to the vendor.
+Thank you for your attention to this matter.
+
+
+Thank you for your attention to this matter.
+
+
+
+Best regards,
+Deputy Director
+Department of Information and Public Relations
+Government of Arunachal Pradesh`;
+
+break;
+
+
+
+
+
 case 'billRaisedDeputy':
       mailOptions.subject = `Action Required: Review and Process Bill for RO Number ${roNumber}`;
       mailOptions.text = `Dear Deputy Director,
