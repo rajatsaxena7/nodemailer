@@ -179,7 +179,7 @@ app.post('/send-email', (req, res) => sendEmail(req, res, 'default'));
 
 // New endpoints
 app.post('/email/release-order', (req, res) => sendEmail(req, res, 'release-order'));
-app.post('/email/billRaisedDeputy', (req, res) => sendEmail(req, res, 'release-order'));
+app.post('/email/billRaisedDeputy', (req, res) => sendEmail(req, res, 'billRaisedDeputy'));
 app.post('/email/vendorreply', (req, res) => sendEmail(req, res, 'vendorreply'));
 app.post('/email/accepting', (req, res) => sendEmail(req, res, 'accepting'));
 app.post('/email/approval-request', (req, res) => sendEmail(req, res, 'approval-request'));
