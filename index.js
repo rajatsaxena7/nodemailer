@@ -246,6 +246,41 @@ Accountant
 Department of Information and Public Relations
 Government of Arunachal Pradesh`;
       break;
+
+ case 'approvedTDd':
+      mailOptions.subject = `Approval and Acknowledgement of Advertisement ${advertisementNumber}`;
+      mailOptions.text = `Dear Deputy Director,
+
+I hope this email finds you well.
+
+This is to inform you that the advertisement with Release Order Number ${roNumber} has been approved and acknowledged by ${vendorName}.
+
+
+Thank you for your  attention to this matter.
+
+Best regards,
+Accountant
+Department of Information and Public Relations
+Government of Arunachal Pradesh`;
+      break;
+
+
+ case 'approvedTDCase':
+      mailOptions.subject = `Approval and Acknowledgement of Advertisement ${advertisementNumber}`;
+      mailOptions.text = `Dear Caseworker,
+
+I hope this email finds you well.
+
+This is to inform you that the advertisement with Release Order Number ${roNumber} has been approved and acknowledged by ${vendorName}.
+
+
+Thank you for your  attention to this matter.
+
+Best regards,
+Deputy Director
+Department of Information and Public Relations
+Government of Arunachal Pradesh`;
+      break;
       
       case 'vendorreply':
       mailOptions.subject = `  Acceptance of Release Order ${roNumber} by ${vendorName}`;
@@ -361,6 +396,30 @@ app.post('/email/billRaisedDeputy', (req, res) => sendEmail(req, res, 'billRaise
 app.post('/email/billRaisedCtd', (req, res) => sendEmail(req, res, 'billRaisedCtd'));
 app.post('/email/notesheetcreate', (req, res) => sendEmail(req, res, 'notesheetcreate'));
 app.post('/email/assistantBill', (req, res) => sendEmail(req, res, 'assistantBill'));
+
+app.post('/email/faoNotesheet', (req, res) => sendEmail(req, res, 'faoNotesheet'));
+
+app.post('/email/directorNotesheet', (req, res) => sendEmail(req, res, 'directorNotesheet'));
+
+
+app.post('/email/secretaryNotesheet', (req, res) => sendEmail(req, res, 'secretaryNotesheet'));
+
+
+app.post('/email/uploadSanction', (req, res) => sendEmail(req, res, 'uploadSanction'));
+
+app.post('/email/approvalSanction', (req, res) => sendEmail(req, res, 'approvalSanction'));
+
+app.post('/email/approvedTFao', (req, res) => sendEmail(req, res, 'approvedTFao'));
+
+app.post('/email/approvedTCase', (req, res) => sendEmail(req, res, 'approvedTCase'));
+
+app.post('/email/approvedTDCase', (req, res) => sendEmail(req, res, 'approvedTDCase'));
+
+app.post('/email/approvedTDd', (req, res) => sendEmail(req, res, 'approvedTDd'));
+
+
+
+
 app.post('/email/vendorreply', (req, res) => sendEmail(req, res, 'vendorreply'));
 app.post('/email/accepting', (req, res) => sendEmail(req, res, 'accepting'));
 app.post('/email/approval-request', (req, res) => sendEmail(req, res, 'approval-request'));
