@@ -42,6 +42,24 @@ ADVT-Cell
 Department of Information and Public Relations
 Government of Arunachal Pradesh`;
       break;
+
+case 'billRaisedDeputy':
+      mailOptions.subject = `Action Required: Review and Process Bill for RO Number ${roNumber}`;
+      mailOptions.text = `Dear Deputy Director,
+
+I hope this email finds you well.
+
+This is to inform you that a bill has been raised by ${vendorName} for the publication of the article bearing RO Number ${roNumber}.
+
+Please review the bill and process it accordingly. You can view the details and approve/reject the bill from your dashboard.
+
+Thank you for your prompt attention to this matter.
+
+Best regards,
+${vendorName}
+Department of Information and Public Relations
+Government of Arunachal Pradesh`;
+      break;
       case 'release-order':
       mailOptions.subject = `Release Order for Publication - ${roNumber}`;
       mailOptions.text = `Dear Newspaper,
@@ -161,6 +179,7 @@ app.post('/send-email', (req, res) => sendEmail(req, res, 'default'));
 
 // New endpoints
 app.post('/email/release-order', (req, res) => sendEmail(req, res, 'release-order'));
+app.post('/email/billRaisedDeputy', (req, res) => sendEmail(req, res, 'release-order'));
 app.post('/email/vendorreply', (req, res) => sendEmail(req, res, 'vendorreply'));
 app.post('/email/accepting', (req, res) => sendEmail(req, res, 'accepting'));
 app.post('/email/approval-request', (req, res) => sendEmail(req, res, 'approval-request'));
