@@ -57,23 +57,30 @@ Thank you for your prompt attention to this matter.
 
 Best regards,
 ${vendorName}
+${vendorContact}
 Department of Information and Public Relations
 Government of Arunachal Pradesh`;
       break;
-      case 'release-order':
-      mailOptions.subject = `Release Order for Publication - ${roNumber}`;
-      mailOptions.text = `Dear Newspaper,
+  
+
+case 'billRaisedCtd':
+      mailOptions.subject = `Notification: Bill Raised for RO Number ${roNumber}`;
+      mailOptions.text = `Dear Caseworker,
 
 I hope this email finds you well.
 
-Please find attached the Release Order ${roNumber} for the article that is scheduled for publication. Please review the attached Release Order and approve/reject it from your dashboard for publication. Your prompt attention to this matter is appreciated to ensure timely publication.
+This is to inform you that a bill has been raised by [vendorname] for the publication of the article bearing RO Number ${roNumber}, which was sent by you through Deputy Director approval.
 
-For any further clarifications or modifications, please feel free to reach out to us. Thank you for your cooperation.
+
+
+Thank you for your prompt attention to this matter.
 
 Best regards,
-ADVT-Cell
+Deputy Director
 Department of Information and Public Relations
 Government of Arunachal Pradesh`;
+      break;
+  
       
       case 'vendorreply':
       mailOptions.subject = `  Acceptance of Release Order ${roNumber} by ${vendorName}`;
@@ -180,6 +187,7 @@ app.post('/send-email', (req, res) => sendEmail(req, res, 'default'));
 // New endpoints
 app.post('/email/release-order', (req, res) => sendEmail(req, res, 'release-order'));
 app.post('/email/billRaisedDeputy', (req, res) => sendEmail(req, res, 'billRaisedDeputy'));
+app.post('/email/billRaisedCtd', (req, res) => sendEmail(req, res, 'billRaisedCtd'));
 app.post('/email/vendorreply', (req, res) => sendEmail(req, res, 'vendorreply'));
 app.post('/email/accepting', (req, res) => sendEmail(req, res, 'accepting'));
 app.post('/email/approval-request', (req, res) => sendEmail(req, res, 'approval-request'));
