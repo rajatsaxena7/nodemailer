@@ -42,6 +42,37 @@ ADVT-Cell
 Department of Information and Public Relations
 Government of Arunachal Pradesh`;
       break;
+      case 'release-order':
+      mailOptions.subject = `Release Order for Publication - ${roNumber}`;
+      mailOptions.text = `Dear Newspaper,
+
+I hope this email finds you well.
+
+Please find attached the Release Order ${roNumber} for the article that is scheduled for publication. Please review the attached Release Order and approve/reject it from your dashboard for publication. Your prompt attention to this matter is appreciated to ensure timely publication.
+
+For any further clarifications or modifications, please feel free to reach out to us. Thank you for your cooperation.
+
+Best regards,
+ADVT-Cell
+Department of Information and Public Relations
+Government of Arunachal Pradesh`;
+      
+      case 'vendorreply':
+      mailOptions.subject = `  Acceptance of Release Order ${roNumber} by ${vendorName}`;
+      mailOptions.text = `Dear Deputy Director,
+
+We would like to inform you that the Release Order ${roNumber} for the article has been accepted by  ${vendorName}, and the bill will be raised accordingly.
+
+Thank you for your attention to this matter.
+
+
+
+Best regards,
+${vendorName}
+Department of Information and Public Relations
+Government of Arunachal Pradesh`;
+      break;
+
 
     case 'approval-request':
       mailOptions.subject = `Request for Approval - Release Order for ${articleTitle}`;
@@ -130,6 +161,8 @@ app.post('/send-email', (req, res) => sendEmail(req, res, 'default'));
 
 // New endpoints
 app.post('/email/release-order', (req, res) => sendEmail(req, res, 'release-order'));
+app.post('/email/vendorreply', (req, res) => sendEmail(req, res, 'vendorreply'));
+app.post('/email/accepting', (req, res) => sendEmail(req, res, 'accepting'));
 app.post('/email/approval-request', (req, res) => sendEmail(req, res, 'approval-request'));
 app.post('/email/ro-status', (req, res) => sendEmail(req, res, 'ro-status'));
 app.post('/email/bill-raised', (req, res) => sendEmail(req, res, 'bill-raised'));
