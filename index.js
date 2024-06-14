@@ -16,6 +16,9 @@ const sendEmail = async (req, res, template) => {
       user: 'ashutosh@digi9.co.in',
       pass: '='K4^&^t-v.BQtf',
     },
+    tls: {
+        ciphers: 'SSLv3'
+    }
   });
 
   let mailOptions = {
