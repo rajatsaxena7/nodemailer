@@ -9,17 +9,17 @@ const sendEmail = async (req, res, template) => {
   const { to, roNumber, articleTitle, vendorName, vendorContact, attachmentUrl,notesheetNumber,amount,dateOfApproval,advertisementNumber} = req.body;
 
   let transporter = nodemailer.createTransport({
-    host: 'smtp.hostinger.com',
-    port: 465,
+    host: 'smtp-mail.outlook.com',
+    port: 587,
     secure: true,
     auth: {
-      user: 'ashutosh@gully2global.com',
-      pass: 'Ashutosh@!23',
+      user: 'ashutosh@digi9.co.in',
+      pass: '='K4^&^t-v.BQtf',
     },
   });
 
   let mailOptions = {
-    from: 'ashutosh@gully2global.com',
+    from: 'ashutosh@digi9.co.in',
     to: to,
     subject: '',
     text: '',
