@@ -9,20 +9,18 @@ const sendEmail = async (req, res, template) => {
   const { to, roNumber, articleTitle, vendorName, vendorContact, attachmentUrl,notesheetNumber,amount,dateOfApproval,advertisementNumber} = req.body;
 
   let transporter = nodemailer.createTransport({
-    host: 'smtp-mail.outlook.com',
+    host: 'smtp.hostinger.com',
     port: 465,
     secure: true,
     auth: {
-      user: 'roopa@digi9.co.in',
-      pass: '='Roopmoha@21',
+      user: 'info@digi9reachinfosystems.com',
+      pass: '='Shasudigi@21',
     },
-    tls: {
-        ciphers: 'SSLv3'
-    }
+   
   });
 
   let mailOptions = {
-    from: 'roopa@digi9.co.in',
+    from: 'info@digi9reachinfosystems.com',
     to: to,
     subject: '',
     text: '',
