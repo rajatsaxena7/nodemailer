@@ -13,14 +13,14 @@ const sendEmail = async (req, res, template) => {
     port: 465,
     secure: true,
     auth: {
-      user: 'ashutosh@gully2global.com',
-      pass: 'Ashutosh@!23',
+      user: 'Info@gully2global.com',
+      pass: 'Shasudigi@217',
     },
    
   });
 
   let mailOptions = {
-    from: 'ashutosh@gully2global.com',
+    from: 'Info@gully2global.com',
     to: to,
     subject: '',
     text: '',
