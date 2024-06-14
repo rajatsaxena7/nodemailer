@@ -13,8 +13,8 @@ const sendEmail = async (req, res, template) => {
     port: 587,
     secure: false,
     auth: {
-      user: 'ashutosh@digi9.co.in',
-      pass: '='K4^&^t-v.BQtf',
+      user: 'roopa@digi9.co.in',
+      pass: '='Roopmoha@21',
     },
     tls: {
         ciphers: 'SSLv3'
@@ -22,7 +22,7 @@ const sendEmail = async (req, res, template) => {
   });
 
   let mailOptions = {
-    from: 'ashutosh@digi9.co.in',
+    from: 'roopa@digi9.co.in',
     to: to,
     subject: '',
     text: '',
