@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 const sendEmail = async (req, res, template) => {
-  const { to, roNumber, articleTitle, vendorName, vendorContact, attachmentUrl,notesheetNumber,amount,dateOfApproval,advertisementNumber} = req.body;
+  const { to, cc,roNumber, articleTitle, vendorName, vendorContact, attachmentUrl,notesheetNumber,amount,dateOfApproval,advertisementNumber} = req.body;
 
   let transporter = nodemailer.createTransport({
     host: 'smtp.hostinger.com',
@@ -22,6 +22,7 @@ const sendEmail = async (req, res, template) => {
   let mailOptions = {
     from: 'Info@gully2global.com',
     to: to,
+    cc:cc
     subject: '',
     text: '',
     attachments: [],
