@@ -351,12 +351,13 @@ Government of Arunachal Pradesh`;
       break;
 
     case 'ro-status':
-      mailOptions.subject = `Status Update: Release Order [Accepted/Rejected] for RO number ${roNumber}`;
+      mailOptions.subject = `Status Update: Release Order ${result} for RO number ${roNumber}`;
       mailOptions.text = `Dear ADVT-Cell,
 
-We would like to inform you that the Release Order ${roNumber} for the article has been [accepted/rejected] by ${vendorName}.
+We would like to inform you that the Release Order ${roNumber} for the article has been ${result}] by ${vendorName}.
 
-If the Release Order has been rejected, please review the feedback provided and take the necessary actions.
+${resultComment}
+
 
 Thank you for your attention to this matter.
 
