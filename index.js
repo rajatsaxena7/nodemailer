@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 const sendEmail = async (req, res, template) => {
-  const { to,cc,roNumber, articleTitle, vendorName, vendorContact, attachmentUrl,notesheetNumber,amount,dateOfApproval,advertisementNumber,result,resultComment} = req.body;
+  const { to,cc,roNumber, articleTitle, vendorName, vendorContact, attachmentUrl,notesheetNumber,amount,dateOfApproval,advertisementNumber,result,resultComment,addressTo} = req.body;
 
   let transporter = nodemailer.createTransport({
     host: 'smtp.hostinger.com',
@@ -352,9 +352,9 @@ Government of Arunachal Pradesh`;
 
     case 'ro-status':
       mailOptions.subject = `Status Update: Release Order ${result} for RO number ${roNumber}`;
-      mailOptions.text = `Dear ADVT-Cell,
+      mailOptions.text = `Dear ${addressTo},
 
-We would like to inform you that the Release Order ${roNumber} for the article has been ${result}] by ${vendorName}.
+We would like to inform you that the Release Order ${roNumber} for the article has been ${result} by ${vendorName}.
 
 ${resultComment}
 
