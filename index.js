@@ -181,7 +181,23 @@ Department of Information and Public Relations
 Government of Arunachal Pradesh`;
       break;
 
+ case 'notesheetRejected':
+      mailOptions.subject = `Notesheet Rejected: Feedback and Necessary Actions Required`;
+      mailOptions.text = `Dear ${addressTo},
 
+I hope this email finds you well.
+
+This is to inform you that the notesheet with Notesheet No. ${notesheetNumber} and an amount of ${amount} for the sent Release Order ${roNumber} has been rejected.
+
+Please review the feedback provided and take the necessary actions.
+
+Thank you for your prompt attention to this matter.
+
+Best regards,
+Deputy Director
+Department of Information and Public Relations
+Government of Arunachal Pradesh`;
+      break;
 
    case 'secretaryNotesheet':
       mailOptions.subject = `Approval Needed: Notesheet ${notesheetNumber}`;
