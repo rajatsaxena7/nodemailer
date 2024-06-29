@@ -187,7 +187,7 @@ Government of Arunachal Pradesh`;
 
 I hope this email finds you well.
 
-This is to inform you that the notesheet with Notesheet No. ${notesheetNumber} and an amount of ${amount} for the sent Release Order ${roNumber} has been rejected.
+This is to inform you that the notesheet with Notesheet No. ${notesheetNumber} and an amount of ${amount} has been rejected.
 
 Please review the feedback provided and take the necessary actions.
 
@@ -464,6 +464,7 @@ app.post('/email/approvedTDd', (req, res) => sendEmail(req, res, 'approvedTDd'))
 
 
 
+app.post('/email/notesheetRejected', (req, res) => sendEmail(req, res, 'notesheetRejected'));
 
 app.post('/email/vendorreply', (req, res) => sendEmail(req, res, 'vendorreply'));
 app.post('/email/accepting', (req, res) => sendEmail(req, res, 'accepting'));
