@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 const sendEmail = async (req, res, template) => {
-  const { to,cc,roNumber, articleTitle, vendorName, vendorContact, attachmentUrl,notesheetNumber,amount,dateOfApproval,advertisementNumber} = req.body;
+  const { to,cc,roNumber, articleTitle, vendorName, vendorContact, attachmentUrl,notesheetNumber,amount,dateOfApproval,advertisementNumber,result,resultComment} = req.body;
 
   let transporter = nodemailer.createTransport({
     host: 'smtp.hostinger.com',
@@ -51,7 +51,7 @@ Government of Arunachal Pradesh`;
       mailOptions.subject = `  Approval Notification for Release Order ${roNumber}.`;
       mailOptions.text = `Dear ADVT-Cell,
 
-We are pleased to inform you that the Release Order ${roNumber} for the article has been approved by the Deputy Director and sent for approval to the vendor.
+We are pleased to inform you that the Release Order ${roNumber} for the article has been ${result} by the Deputy Director ${resultComment}
 
 
 
