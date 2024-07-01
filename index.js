@@ -187,7 +187,7 @@ Government of Arunachal Pradesh`;
 
 I hope this email finds you well.
 
-This is to inform you that the notesheet with Notesheet No. ${notesheetNumber} and an amount of ${amount} has been rejected.
+This is to inform you that the notesheet with Notesheet No. ${notesheetNumber} has been rejected.
 
 Please review the feedback provided and take the necessary actions.
 
