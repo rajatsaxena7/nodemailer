@@ -397,6 +397,19 @@ ${vendorName}
 ${vendorContact}`;
       break;
 
+       case 'informDept':
+      mailOptions.subject = `Notification: Release Sent to Vendors for RO Number ${roNumber}`;
+      mailOptions.text = `Dear Department,
+
+This is to inform you that a release order has been sent to vendors for the publication of the article bearing RO Number ${roNumber}.
+
+Thank you for your prompt attention to this matter.
+
+Best regards,
+${vendorName}
+${vendorContact}`;
+      break;
+
     default:
       mailOptions.subject = req.body.subject;
       mailOptions.text = `Attention Required,
@@ -472,6 +485,7 @@ app.post('/email/approval-request', (req, res) => sendEmail(req, res, 'approval-
 app.post('/email/ro-status', (req, res) => sendEmail(req, res, 'ro-status'));
 app.post('/email/bill-raised', (req, res) => sendEmail(req, res, 'bill-raised'));
 
+app.post('/email/informDept', (req, res) => sendEmail(req, res, 'informDept'));
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
