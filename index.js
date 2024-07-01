@@ -398,7 +398,7 @@ ${vendorContact}`;
       break;
 
        case 'informDept':
-      mailOptions.subject = `Notification: Release Sent to Vendors for RO Number ${roNumber}`;
+      mailOptions.subject = `Notification: Release Order Sent to Vendors for RO Number ${roNumber}`;
       mailOptions.text = `Dear Department,
 I hope this email finds you well.
 
@@ -407,8 +407,7 @@ This is to inform you that a release order has been sent to vendors for the publ
 Thank you for your prompt attention to this matter.
 
 Best regards,
-${vendorName}
-${vendorContact}`;
+Vendor Team `;
       break;
 
     default:
