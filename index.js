@@ -400,6 +400,7 @@ ${vendorContact}`;
        case 'informDept':
       mailOptions.subject = `Notification: Release Sent to Vendors for RO Number ${roNumber}`;
       mailOptions.text = `Dear Department,
+I hope this email finds you well.
 
 This is to inform you that a release order has been sent to vendors for the publication of the article bearing RO Number ${roNumber}.
 
