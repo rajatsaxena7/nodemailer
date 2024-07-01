@@ -407,7 +407,9 @@ This is to inform you that a release order has been sent to vendors for the publ
 Thank you for your prompt attention to this matter.
 
 Best regards,
-Technical Assistant-Advt`;
+Technical Assistant-Advt
+Department of Information and Public Relations
+Government of Arunachal Pradesh`;
       break;
 
     default:
