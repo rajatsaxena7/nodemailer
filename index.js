@@ -66,7 +66,24 @@ Government of Arunachal Pradesh`;
 
 break;
 
+   case 'accept35':
+      mailOptions.subject = `  Approval Notification for Release Order ${roNumber}.`;
+      mailOptions.text = `Dear ${addressTo},
 
+We are pleased to inform you that the Notesheet No. ${notesheetNumber} for the article has been ${result}.
+
+
+
+Thank you for your attention to this matter.
+
+
+
+Best regards,
+Deputy Director
+Department of Information and Public Relations
+Government of Arunachal Pradesh`;
+
+break;
 
 
 
@@ -486,6 +503,7 @@ app.post('/email/accepting', (req, res) => sendEmail(req, res, 'accepting'));
 app.post('/email/approval-request', (req, res) => sendEmail(req, res, 'approval-request'));
 app.post('/email/ro-status', (req, res) => sendEmail(req, res, 'ro-status'));
 app.post('/email/bill-raised', (req, res) => sendEmail(req, res, 'bill-raised'));
+app.post('/email/accept35', (req, res) => sendEmail(req, res, 'accept35'));
 
 app.post('/email/informDept', (req, res) => sendEmail(req, res, 'informDept'));
 const port = process.env.PORT || 3000;
