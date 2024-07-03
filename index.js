@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 const sendEmail = async (req, res, template) => {
-  const { to,cc,roNumber, articleTitle, vendorName, vendorContact, attachmentUrl,notesheetNumber,amount,dateOfApproval,advertisementNumber,result,resultComment,addressTo} = req.body;
+  const { to,cc,roNumber, articleTitle, vendorName, vendorContact, attachmentUrl,notesheetNumber,amount,dateOfApproval,advertisementNumber,result,resultComment,addressTo,regardsFrom} = req.body;
 
   let transporter = nodemailer.createTransport({
     host: 'smtp.hostinger.com',
@@ -166,7 +166,7 @@ Government of Arunachal Pradesh`;
       
  case 'directorNotesheet':
       mailOptions.subject = `Review and Approval Request for Notesheet ${notesheetNumber}`;
-      mailOptions.text = `Dear Director,
+      mailOptions.text = `Dear ${addressTo},
 
 I hope this email finds you well.
 
@@ -176,7 +176,7 @@ Please review the notesheet and provide your response by either adding your note
 Thank you for your prompt attention to this matter.
 
 Best regards,
-FAO
+${regardsFrom}
 Department of Information and Public Relations
 Government of Arunachal Pradesh`;
       break;
