@@ -401,7 +401,7 @@ ${vendorContact}`;
 
     case 'bill-raised':
       mailOptions.subject = `Action Required: Bill Raised for Published Article bearing RO Number ${roNumber}`;
-      mailOptions.text = `Dear ADVT-Cell,
+      mailOptions.text = `Dear Deputy Director,
 
 This is to inform you that a bill has been raised by ${vendorName} for the publication of the article bearing RO Number ${roNumber}.
 
