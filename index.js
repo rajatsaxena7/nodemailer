@@ -31,7 +31,7 @@ const sendEmail = async (req, res, template) => {
   switch (template) {
     case 'release-order':
       mailOptions.subject = `Release Order for Publication - ${roNumber}`;
-      mailOptions.text = `Dear Newspaper,
+      mailOptions.text = `Dear ${adressTo},
 
 I hope this email finds you well.
 
@@ -368,7 +368,7 @@ Government of Arunachal Pradesh`;
 
     case 'approval-request':
       mailOptions.subject = `Request for Approval - Release Order for ${articleTitle}`;
-      mailOptions.text = `Greetings sir,
+      mailOptions.text = `Dear Deputy Director,
 
 I hope this email finds you well.
 
