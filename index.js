@@ -142,7 +142,23 @@ ${vendorContact}
 Department of Information and Public Relations
 Government of Arunachal Pradesh`;
       break;
+ case 'BillRejectDD':
+      mailOptions.subject = `Bill Rejected for RO Number ${roNumber}`;
+      mailOptions.text = `Dear ${addressTo},
 
+I hope this email finds you well.
+
+This is to inform you that a bill has been rejected for the publication of the article bearing RO Number ${roNumber}.
+
+
+Thank you for your prompt attention to this matter.
+
+Best regards,
+${vendorName}
+${vendorContact}
+Department of Information and Public Relations
+Government of Arunachal Pradesh`;
+      break;
 
 
       
@@ -504,6 +520,8 @@ app.post('/email/approval-request', (req, res) => sendEmail(req, res, 'approval-
 app.post('/email/ro-status', (req, res) => sendEmail(req, res, 'ro-status'));
 app.post('/email/bill-raised', (req, res) => sendEmail(req, res, 'bill-raised'));
 app.post('/email/accept35', (req, res) => sendEmail(req, res, 'accept35'));
+app.post('/email/BillRejectDD', (req, res) => sendEmail(req, res, 'BillRejectDD'));
+
 
 app.post('/email/informDept', (req, res) => sendEmail(req, res, 'informDept'));
 const port = process.env.PORT || 3000;
