@@ -147,12 +147,12 @@ Government of Arunachal Pradesh`;
 
       
  case 'notesheetcreate':
-      mailOptions.subject = ` Request for Review and Action: Notesheet ${notesheetNumber} for Release Order ${roNumber}`;
+      mailOptions.subject = ` Request for Review and Action: Notesheet ${notesheetNumber}.`;
       mailOptions.text = `Dear Deputy Director,
 
 I hope this email finds you well.
 
-This is to inform you that a notesheet has been created with Notesheet No. ${notesheetNumber} and an amount of ${amount} for the sent Release Order ${roNumber}.
+This is to inform you that a notesheet has been created with Notesheet No. ${notesheetNumber} and an amount of ${amount}.
 Please review the bill and process it accordingly. You can view the details and approve or reject the bill from your dashboard.
 
 Thank you for your prompt attention to this matter.
