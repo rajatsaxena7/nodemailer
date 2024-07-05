@@ -165,12 +165,12 @@ Government of Arunachal Pradesh`;
 
 
  case 'faoNotesheet':
-      mailOptions.subject = `Review Request for Notesheet ${notesheetNumber} for Release Order ${roNumber}`;
+      mailOptions.subject = `Review Request for Notesheet ${notesheetNumber}.`;
       mailOptions.text = `Dear FAO,
 
 I hope this email finds you well.
 
-This is to inform you that a notesheet has been created with Notesheet No. ${notesheetNumber} and an amount of ${amount} for the Release Order ${roNumber}.
+This is to inform you that a notesheet has been created with Notesheet No. ${notesheetNumber} and an amount of ${amount}.
 Please review the notesheet and provide your response by either adding your notes or rejecting it. You can view the details and approve or reject the bill from your dashboard.
 
 Thank you for your prompt attention to this matter.
@@ -187,7 +187,7 @@ Government of Arunachal Pradesh`;
 
 I hope this email finds you well.
 
-This is to inform you that a notesheet has been created with Notesheet No. ${notesheetNumber} and an associated amount of ${amount} pertaining to the Release Order ${roNumber}.
+This is to inform you that a notesheet has been created with Notesheet No. ${notesheetNumber} and an associated amount of ${amount}.
 Please review the notesheet and provide your response by either adding your notes or rejecting it. You can view the details and approve or reject the notesheet from your dashboard.
 
 Thank you for your prompt attention to this matter.
@@ -222,7 +222,7 @@ Government of Arunachal Pradesh`;
 
 I hope this email finds you well.
 
-A notesheet with No. ${notesheetNumber} and amount [amount] related to Release Order ${roNumber} requires your approval.
+A notesheet with No. ${notesheetNumber} and amount ${amount} related to Release Order ${roNumber} requires your approval.
 Please review the details and indicate your decision via your dashboard.
 
 Thank you for your prompt attention to this matter.
