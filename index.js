@@ -289,19 +289,19 @@ Government of Arunachal Pradesh`;
     
     case 'approvedTFao':
       mailOptions.subject = ` Approval Notification for Notesheet ${notesheetNumber} `;
-      mailOptions.text = `Dear FAO,
+      mailOptions.text = `Dear UnderSecretary,
 
 I hope this email finds you well.
 
 
-This is to inform you that the notesheet with Notesheet No. ${notesheetNumber} has been approved on ${dateOfApproval}.
+This is to inform you that the notesheet with Notesheet No. ${notesheetNumber} and an associated amount of ${amount} has been approved.
 
 Please review the approval details at your earliest convenience.
 
 Thank you for your prompt attention to this matter.
 
 Best regards,
-Accountant
+Secretary
 Department of Information and Public Relations
 Government of Arunachal Pradesh`;
       break;
