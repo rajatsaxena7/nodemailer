@@ -348,7 +348,7 @@ Government of Arunachal Pradesh`;
 
 I hope this email finds you well.
 
-This is to inform you that the bill with Release Order Number ${roNumber} has been approved by Deputy Director.
+This is to inform you that the raised bill for Release Order Number ${roNumber} has been approved by the Deputy Director.
 
 
 Thank you for your  attention to this matter.
