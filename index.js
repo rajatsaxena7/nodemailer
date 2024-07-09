@@ -343,12 +343,12 @@ Government of Arunachal Pradesh`;
 
 
  case 'approvedTDCase':
-      mailOptions.subject = `Approval and Acknowledgement of Advertisement ${advertisementNumber}`;
-      mailOptions.text = `Dear Caseworker,
+      mailOptions.subject = `Approval and Acknowledgement of release order ${roNumber}`;
+      mailOptions.text = `Greetings Sir/Madam,
 
 I hope this email finds you well.
 
-This is to inform you that the advertisement with Release Order Number ${roNumber} has been approved and acknowledged by ${vendorName}.
+This is to inform you that the advertisement with Release Order Number ${roNumber} has been approved and acknowledged by Deputy Director.
 
 
 Thank you for your  attention to this matter.
