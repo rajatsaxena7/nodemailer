@@ -31,7 +31,7 @@ const sendEmail = async (req, res, template) => {
   switch (template) {
     case 'release-order':
       mailOptions.subject = `Release Order for Publication - ${roNumber}`;
-      mailOptions.text = `Dear ${addressTo},
+      mailOptions.text = `Greetings Sir,
 
 I hope this email finds you well.
 
