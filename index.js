@@ -131,7 +131,7 @@ Government of Arunachal Pradesh`;
 
 I hope this email finds you well.
 
-This is to inform you that a bill has been raised by ${vendorName} for the publication of the article bearing RO Number ${roNumber} and has been sent to you for processing.
+This is to inform you that a raised bill has been approved by ${vendorName} for the publication of the article bearing RO Number ${roNumber} and has been sent to you for processing.
 Please review the bill and process it accordingly. You can view the details and approve or reject the bill from your dashboard.
 
 Thank you for your prompt attention to this matter.
@@ -348,7 +348,7 @@ Government of Arunachal Pradesh`;
 
 I hope this email finds you well.
 
-This is to inform you that the raised bill for Release Order Number ${roNumber} has been approved by the Deputy Director.
+This is to inform you that the raised bill for Release Order Number ${roNumber} with an amount ${advertisementNumber} has been approved by the Deputy Director.
 
 
 Thank you for your  attention to this matter.
