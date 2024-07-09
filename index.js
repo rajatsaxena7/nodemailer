@@ -35,7 +35,7 @@ const sendEmail = async (req, res, template) => {
 
 I hope this email finds you well.
 
-Please find attached the Release Order ${roNumber} for the article that is scheduled for publication. Please review the attached Release Order and approve/reject it from your dashboard for publication. 
+This is to inform that the Release Order ${roNumber} for the article is scheduled for publication. Please review the Release Order and approve/reject it from your dashboard for publication. 
 Your prompt attention to this matter is appreciated to ensure timely publication.
 
 Thank you for your cooperation.
