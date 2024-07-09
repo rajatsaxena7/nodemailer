@@ -343,7 +343,7 @@ Government of Arunachal Pradesh`;
 
 
  case 'approvedTDCase':
-      mailOptions.subject = `Approval and Acknowledgement of release order ${roNumber}`;
+      mailOptions.subject = `Bill Approval Notice: Release Order ${roNumber}`;
       mailOptions.text = `Greetings Sir/Madam,
 
 I hope this email finds you well.
