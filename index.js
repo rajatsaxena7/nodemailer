@@ -50,7 +50,7 @@ Government of Arunachal Pradesh`;
 
       
       case 'accepting':
-      mailOptions.subject = `Approval Notification for Release Order ${roNumber}.`;
+      mailOptions.subject = ` Notification for Release Order ${roNumber}.`;
       mailOptions.text = `Dear ADVT-Cell,
 
 We are pleased to inform you that the Release Order ${roNumber} for the article has been ${result} by the Deputy Director ${resultComment}
@@ -69,7 +69,7 @@ Government of Arunachal Pradesh`;
 break;
 
    case 'accept35':
-      mailOptions.subject = `Approval Notification for Release Order ${roNumber}.`;
+      mailOptions.subject = ` Notification for Release Order ${roNumber}.`;
       mailOptions.text = `Dear ${addressTo},
 
 We are pleased to inform you that the Notesheet No. ${notesheetNumber} for the article has been ${result}.
@@ -114,7 +114,7 @@ case 'billRaisedCtd':
 
 I hope this email finds you well.
 
-This is to inform you that a bill has been raised by [vendorname] for the publication of the article bearing RO Number ${roNumber}, which was sent by you through Deputy Director approval.
+This is to inform you that a bill has been raised by [vendorname] for the publication of the article bearing RO Number ${roNumber}, which was sent by you through Deputy Director .
 
 
 
@@ -200,7 +200,7 @@ Government of Arunachal Pradesh`;
       break;
       
  case 'directorNotesheet':
-      mailOptions.subject = `Review and Approval Request for Notesheet ${notesheetNumber}`;
+      mailOptions.subject = `Review and  Request for Notesheet ${notesheetNumber}`;
       mailOptions.text = `Dear ${addressTo},
 
 I hope this email finds you well.
@@ -235,12 +235,12 @@ Government of Arunachal Pradesh`;
       break;
 
    case 'secretaryNotesheet':
-      mailOptions.subject = `Approval Needed: Notesheet ${notesheetNumber}`;
+      mailOptions.subject = ` Needed: Notesheet ${notesheetNumber}`;
       mailOptions.text = `Dear Secretary,
 
 I hope this email finds you well.
 
-A notesheet with No. ${notesheetNumber} and amount ${amount} related to Release Order ${roNumber} requires your approval.
+A notesheet with No. ${notesheetNumber} and amount ${amount} related to Release Order ${roNumber} requires your .
 Please review the details and indicate your decision via your dashboard.
 
 Thank you for your prompt attention to this matter.
@@ -270,14 +270,15 @@ Government of Arunachal Pradesh`;
       break;
 
 
- case 'approvalSanction':
+ case 'Sanction':
       mailOptions.subject = `Action Required: View and Submit Approval for Sanction letter`;
       mailOptions.text = `Dear Accountant,
 
 I hope this email finds you well.
 
-This is to inform you that the Sanction letter for the article has been uploaded.
-Please view the details and, if approved, submit the sanction letter. You can either approve or reject it from your dashboard.
+This is to inform you that the Sanction letter for the article has been uploaded bearing Notesheet number ${notesheetNumber}.
+ You can view and download the sanction letter.
+
 
 Thank you for your prompt attention to this matter.
 
