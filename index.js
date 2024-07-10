@@ -41,7 +41,7 @@ Your prompt attention to this matter is appreciated to ensure timely publication
 Thank you for your cooperation.
 
 Best regards,
-ADVT-Cell
+${addressTo}
 Department of Information and Public Relations
 Government of Arunachal Pradesh`;
       break;
