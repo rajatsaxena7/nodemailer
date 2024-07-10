@@ -270,7 +270,7 @@ Government of Arunachal Pradesh`;
       break;
 
 
- case 'Sanction':
+ case 'approvalSanction':
       mailOptions.subject = `Action Required: View and Submit Approval for Sanction letter`;
       mailOptions.text = `Dear Accountant,
 
