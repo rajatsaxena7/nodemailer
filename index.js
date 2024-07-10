@@ -50,7 +50,7 @@ Government of Arunachal Pradesh`;
 
       
       case 'accepting':
-      mailOptions.subject = `  Approval Notification for Release Order ${roNumber}.`;
+      mailOptions.subject = `Approval Notification for Release Order ${roNumber}.`;
       mailOptions.text = `Dear ADVT-Cell,
 
 We are pleased to inform you that the Release Order ${roNumber} for the article has been ${result} by the Deputy Director ${resultComment}
@@ -69,7 +69,7 @@ Government of Arunachal Pradesh`;
 break;
 
    case 'accept35':
-      mailOptions.subject = `  Approval Notification for Release Order ${roNumber}.`;
+      mailOptions.subject = `Approval Notification for Release Order ${roNumber}.`;
       mailOptions.text = `Dear ${addressTo},
 
 We are pleased to inform you that the Notesheet No. ${notesheetNumber} for the article has been ${result}.
@@ -165,7 +165,7 @@ Government of Arunachal Pradesh`;
 
       
  case 'notesheetcreate':
-      mailOptions.subject = ` Request for Review and Action: Notesheet ${notesheetNumber}.`;
+      mailOptions.subject = `Request for Review and Action: Notesheet ${notesheetNumber}.`;
       mailOptions.text = `Dear Deputy Director,
 
 I hope this email finds you well.
@@ -290,7 +290,7 @@ Government of Arunachal Pradesh`;
     
     
     case 'approvedTFao':
-      mailOptions.subject = ` Approval Notification for Notesheet ${notesheetNumber} `;
+      mailOptions.subject = `Approval Notification for Notesheet ${notesheetNumber} `;
       mailOptions.text = `Dear UnderSecretary,
 
 I hope this email finds you well.
@@ -362,7 +362,7 @@ Government of Arunachal Pradesh`;
       break;
       
       case 'vendorreply':
-      mailOptions.subject = `  Acceptance of Release Order ${roNumber} by ${vendorName}`;
+      mailOptions.subject = `Acceptance of Release Order ${roNumber} by ${vendorName}`;
       mailOptions.text = `Dear Deputy Director,
 
 We would like to inform you that the Release Order ${roNumber} for the article has been accepted by  ${vendorName}, and the bill will be raised accordingly.
