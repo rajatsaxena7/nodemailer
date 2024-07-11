@@ -218,7 +218,7 @@ Government of Arunachal Pradesh`;
 
  case 'notesheetRejected':
       mailOptions.subject = `Notesheet Rejected: Feedback and Necessary Actions Required`;
-      mailOptions.text = `Dear ${addressTo},
+      mailOptions.text = `Greetings Sir/Madam,
 
 I hope this email finds you well.
 
@@ -229,7 +229,7 @@ Please review the feedback provided and take the necessary actions.
 Thank you for your prompt attention to this matter.
 
 Best regards,
-Deputy Director
+
 Department of Information and Public Relations
 Government of Arunachal Pradesh`;
       break;
