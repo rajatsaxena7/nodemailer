@@ -103,7 +103,7 @@ Thank you for your prompt attention to this matter.
 Best regards,
 ${vendorName}
 ${vendorContact}
-Department of Information and Public Relations
+Department of Information and Public Relationsfin
 Government of Arunachal Pradesh`;
       break;
   
