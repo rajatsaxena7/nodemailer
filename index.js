@@ -1,9 +1,11 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const axios = require('axios');
+const cors = require('cors'); // Import cors
 const app = express();
 
 app.use(express.json());
+app.use(cors()); // Enable CORS
 
 const sendEmail = async (req, res, template) => {
   const { to,cc,roNumber, articleTitle, vendorName, vendorContact, attachmentUrl,notesheetNumber,amount,dateOfApproval,advertisementNumber,result,resultComment,addressTo,regardsFrom} = req.body;
