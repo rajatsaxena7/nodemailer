@@ -71,7 +71,7 @@ Government of Arunachal Pradesh`;
 break;
 
    case 'accept35':
-      mailOptions.subject = ` Notification for Release Order ${roNumber}.`;
+      mailOptions.subject = ` Notification for Notesheet No. ${notesheetNumber}.`;
       mailOptions.text = `Dear ${addressTo},
 
 We are pleased to inform you that the Notesheet No. ${notesheetNumber} for the article has been ${result}.
