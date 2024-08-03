@@ -83,7 +83,7 @@ Thank you for your attention to this matter.
 
 
 Best regards,
-Deputy Director
+Director
 Department of Information and Public Relations
 Government of Arunachal Pradesh`;
 
@@ -105,7 +105,7 @@ Thank you for your prompt attention to this matter.
 Best regards,
 ${vendorName}
 ${vendorContact}
-Department of Information and Public Relationsfin
+Department of Information and Public Relations
 Government of Arunachal Pradesh`;
       break;
   
