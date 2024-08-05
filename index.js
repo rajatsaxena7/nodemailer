@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(cors()); // Enable CORS
 
 const sendEmail = async (req, res, template) => {
-  const { to,cc,roNumber, articleTitle, vendorName, vendorContact, attachmentUrl,notesheetNumber,amount,dateOfApproval,advertisementNumber,result,resultComment,addressTo,regardsFrom} = req.body;
+  const { to,cc,roNumber, articleTitle, vendorName, vendorContact, attachmentUrl,notesheetNumber,amount,dateOfApproval,advertisementNumber,result,resultComment,addressTo,regardsFrom,billAddress,billNumber} = req.body;
 
   let transporter = nodemailer.createTransport({
     host: 'smtp.hostinger.com',
@@ -425,6 +425,7 @@ ${vendorContact}`;
       mailOptions.text = `Dear Deputy Director,
 
 This is to inform you that a bill has been raised by ${vendorName} for the publication of the article bearing RO Number ${roNumber}.
+The bill, with number ${billNumber}, is addressed to ${billAddress}.
 
 Please review the bill and process it accordingly. You can view the details and approve/reject the bill from your dashboard.
 
