@@ -16,7 +16,7 @@ const sendEmail = async (req, res, template) => {
     secure: true,
     auth: {
       user: 'Dipr@arunachaliprvisualhub.in',
-      pass: 'A@m7249435774',
+      pass: 'Digi9@21',
     },
    
   });
