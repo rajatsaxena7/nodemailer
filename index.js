@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(cors()); // Enable CORS
 
 const sendEmail = async (req, res, template) => {
-  const { to,cc,roNumber, articleTitle, vendorName, vendorContact, attachmentUrl,notesheetNumber,amount,dateOfApproval,advertisementNumber,result,resultComment,addressTo,regardsFrom,billAddress,billNumber} = req.body;
+  const { to,cc,roNumber, articleTitle, vendorName, vendorContact, attachmentUrl,notesheetNumber,amount,dateOfApproval,advertisementNumber,result,resultComment,addressTo,regardsFrom,billAddress,billNumber,reasonOfRejection} = req.body;
 
   let transporter = nodemailer.createTransport({
     host: 'smtp.hostinger.com',
@@ -152,7 +152,8 @@ Government of Arunachal Pradesh`;
 
 I hope this email finds you well.
 
-This is to inform you that a bill has been rejected for the publication of the article bearing RO Number ${roNumber}.
+This is to inform you that a bill has been rejected for the publication of the article bearing RO Number ${roNumber}. The reason for rejection is as follows:
+${roNumberreasonOfRejection}.
 
 
 Thank you for your prompt attention to this matter.
