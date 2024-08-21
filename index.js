@@ -171,9 +171,9 @@ case 'BillResubmittedDD':
 
 I hope this email finds you well.
 
-This is to inform you that the bill for the publication of the article bearing RO Number ${roNumber} has been resubmitted after considering the reason for its previous rejection (${reasonOfRejection}). 
+This is to inform you that the bill for the publication of the article bearing RO Number ${roNumber} has been resubmitted after considering the reason (${reasonOfRejection}). 
 
-We kindly request you to review the resubmitted bill and provide your approval or rejection at your earliest convenience.
+We kindly request you to review the resubmitted bill.
 
 Thank you for your prompt attention to this matter.
 
