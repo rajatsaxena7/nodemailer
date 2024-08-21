@@ -165,6 +165,24 @@ Department of Information and Public Relations
 Government of Arunachal Pradesh`;
       break;
 
+case 'BillResubmittedDD':
+      mailOptions.subject = `Resubmission of Bill for RO Number ${roNumber}`;
+      mailOptions.text = `Dear ${addressTo},
+
+I hope this email finds you well.
+
+This is to inform you that the bill for the publication of the article bearing RO Number ${roNumber} has been resubmitted after considering the reason for its previous rejection. 
+
+We kindly request you to review the resubmitted bill and provide your approval or rejection at your earliest convenience.
+
+Thank you for your prompt attention to this matter.
+
+Best regards,
+${vendorName}
+${vendorContact}
+Department of Information and Public Relations
+Government of Arunachal Pradesh`;
+      break;
 
       
  case 'notesheetcreate':
