@@ -546,7 +546,7 @@ app.post('/email/ro-status', (req, res) => sendEmail(req, res, 'ro-status'));
 app.post('/email/bill-raised', (req, res) => sendEmail(req, res, 'bill-raised'));
 app.post('/email/accept35', (req, res) => sendEmail(req, res, 'accept35'));
 app.post('/email/BillRejectDD', (req, res) => sendEmail(req, res, 'BillRejectDD'));
-
+app.post('/email/BillResubmittedDD', (req, res) => sendEmail(req, res, 'BillResubmittedDD'));
 
 app.post('/email/informDept', (req, res) => sendEmail(req, res, 'informDept'));
 const port = process.env.PORT || 3000;
