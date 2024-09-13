@@ -550,7 +550,7 @@ app.post('/email/approvedTDCase', (req, res) => sendEmail(req, res, 'approvedTDC
 
 app.post('/email/approvedTDd', (req, res) => sendEmail(req, res, 'approvedTDd'));
 
-
+app.post('/email/VendorStausDept', (req, res) => sendEmail(req, res, 'VendorStausDept'));
 
 app.post('/email/notesheetRejected', (req, res) => sendEmail(req, res, 'notesheetRejected'));
 
