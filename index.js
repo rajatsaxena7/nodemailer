@@ -454,7 +454,22 @@ Best regards,
 ${vendorName}
 ${vendorContact}`;
       break;
+ case 'VendorStausDept':
+      mailOptions.subject = `Acknowledgement: Vendor Confirmed Advertisement for RO Number ${roNumber}`;
+      mailOptions.text = `Dear Sir/Madam,
 
+I hope this email finds you well.
+
+This is to inform you that ${vendorName} has acknowledged the publication of the advertisement bearing RO Number ${roNumber}.
+
+Thank you for your prompt attention to this matter.
+
+Best regards,
+${vendorName}
+${vendorContact}
+Department of Information and Public Relations
+Government of Arunachal Pradesh`;
+      break;
        case 'informDept':
       mailOptions.subject = `Notification: Release Order Sent to Vendors for Advertisement Number ${advertisementNumber}`;
       mailOptions.text = `Dear Department,
