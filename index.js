@@ -477,7 +477,7 @@ I hope this email finds you well.
 
 This is to inform you that your advertisement sent to us(DIPR) vide No. ${advertisementNumber} has been sent/released to the newspapers for publishing. 
 
-Warm regards
+Warm regards.
 
 
 Deputy Director of IPR(Advt)
