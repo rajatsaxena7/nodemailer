@@ -472,15 +472,15 @@ Government of Arunachal Pradesh`;
       break;
        case 'informDept':
       mailOptions.subject = `Notification: Release Order Sent to Vendors for Advertisement Number ${advertisementNumber}`;
-      mailOptions.text = `Dear Department,
+      mailOptions.text = `Dear Sir/Madam,
 I hope this email finds you well.
 
-This is to inform you that a release order has been sent to vendors for the publication of the article bearing Advertisement Number ${advertisementNumber}.
+This is to inform you that your advertisement sent to us(DIPR) vide No. ${advertisementNumber} has been sent/released to the newspapers for publishing. 
 
-Thank you for your prompt attention to this matter.
+Warm regards
 
-Best regards,
-Deputy Director
+
+Deputy Director of IPR(Advt)
 Department of Information and Public Relations
 Government of Arunachal Pradesh`;
       break;
