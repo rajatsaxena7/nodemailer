@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(cors()); // Enable CORS
 
 const sendEmail = async (req, res, template) => {
-  const { to,cc,roNumber, articleTitle, vendorName, vendorContact, attachmentUrl,notesheetNumber,amount,dateOfApproval,advertisementNumber,result,resultComment,addressTo,regardsFrom,billAddress,billNumber,reasonOfRejection} = req.body;
+  const { to,cc,roNumber, articleTitle, vendorName, vendorContact, attachmentUrl,notesheetNumber,amount,dateOfApproval,advertisementNumber,result,resultComment,addressTo,regardsFrom,billAddress,billNumber,reasonOfRejection,listOfNewspapers} = req.body;
 
   let transporter = nodemailer.createTransport({
     host: 'smtp.hostinger.com',
@@ -471,11 +471,14 @@ Department of Information and Public Relations
 Government of Arunachal Pradesh`;
       break;
        case 'informDept':
+      const newspapersListText = listOfNewspapers.join('\n'); 
       mailOptions.subject = `Notification: Release Order Sent to Vendors for Advertisement Number ${advertisementNumber}`;
       mailOptions.text = `Dear Sir/Madam,
 I hope this email finds you well.
 
-This is to inform you that your advertisement sent to us(DIPR) vide No. ${advertisementNumber} has been sent/released to the newspapers for publishing. 
+This is to inform you that your advertisement sent to us(DIPR) vide No. ${advertisementNumber} has been sent/released to the newspapers for publishing:
+${newspapersListText}
+
 
 Warm regards.
 
