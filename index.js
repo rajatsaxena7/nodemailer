@@ -476,7 +476,7 @@ Government of Arunachal Pradesh`;
       mailOptions.text = `Dear Sir/Madam,
 I hope this email finds you well.
 
-This is to inform you that your advertisement sent to us(DIPR) vide No. ${advertisementNumber} has been sent/released to the newspapers for publishing:
+This is to inform you that your advertisement sent to us(DIPR) vide No. ${advertisementNumber} has been sent/released to the following newspapers for publishing:
 ${newspapersListText}
 
 
